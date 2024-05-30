@@ -1,0 +1,51 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+    <div class="container">
+        <form method="post" action="">
+            <div class="form_group">
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" id="fname" value="<?php echo isset($fname) ? $fname : ''; ?>">
+            </div>
+
+            <div class="form_group">
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" id="lname" value="<?php echo isset($lname) ? $lname : ''; ?>">
+            </div>
+
+            <div class="form_group">
+                <label for="age">Age:</label>
+                <input type="text" name="age" id="age" value="<?php echo isset($age) ? $age : ''; ?>">
+            </div>
+
+            <div class="form_group">
+                <label for="gender">Gender:</label>
+                <input type="radio" name="gender" id="male" value="male" <?php echo (isset($gender) && $gender == 'male') ? 'checked' : ''; ?>>
+                <label for="male">Male</label>
+
+                <input type="radio" name="gender" id="female" value="female" <?php echo (isset($gender) && $gender == 'female') ? 'checked' : ''; ?>>
+                <label for="female">Female</label>
+
+                <input type="radio" name="gender" id="other" value="other" <?php echo (isset($gender) && $gender == 'other') ? 'checked' : ''; ?>>
+                <label for="other">Other</label>
+            </div>
+
+            <div class="form_group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" value="<?php echo isset($email) ? $email : ''; ?>">
+            </div>
+
+            <div class="form_group">
+                <input type="submit" name="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
